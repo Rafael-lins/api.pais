@@ -1,2 +1,2 @@
 # api.pais
-estudo pais
+estudo pais, tentando adicionar a função de imagens e bandeiras
