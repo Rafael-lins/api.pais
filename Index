@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Requisição HTTP com XMLHttpRequest pela Coderhouse</title>
+</head>
+<body>
+    <button onclick="fazerRequisicao()">Fazer Requisição</button>
+
+    <script>
+        function fazerRequisicao() {
+            const url = 'https://restcountries.com/v3.1/name/brazil'; // Aqui para substituir pela URL desejada
+
+            var xhr = new XMLHttpRequest();
+            console.log('UNSENT',xhr.readyState)
+
+            xhr.open('GET', 'https://restcountries.com/v3.1/name/brazil' , true);
+            console.log('OPENED', xhr.readyState)
+
+            xhr.onprogress = function () {
+            console.log('LOADING', xhr.readyState);
+            };
+
+            xhr.onload = function () {
+                    console.log('DONE'xhr.readyState);
+                };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
